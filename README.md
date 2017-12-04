@@ -25,9 +25,7 @@ stow --no-folding test
 will symlink
 ```text
 ..
-├── test
-│   ├── .one
-│   └── testado
-│       └── .two
-
+├── .one
+└── testado
+    └── .two
 ```
