@@ -24,7 +24,7 @@ stow --no-folding test
 ```
 will symlink
 ```text
-/home/username
+..
 ├── test
 │   ├── .one
 │   └── testado
