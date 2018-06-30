@@ -16,4 +16,5 @@ compton \
 udisks2 \
 feh \
 python-pywal \
-pulseaudio
+pulseaudio \
+rofi

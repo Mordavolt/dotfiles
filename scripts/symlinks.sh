@@ -2,7 +2,7 @@
 PREFIX="${GREEN}[STOW]${CLEAR}"
 
 declare -a folders
-folders=(git i3 gtk compton polybar screenshot)
+folders=(git i3 gtk compton polybar screenshot termite)
 
 for folder in "${folders[@]}"
 do
