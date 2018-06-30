@@ -1,14 +1,14 @@
 #!/bin/bash
 source scripts/colors.sh
-PREFIX="${RED}[INSTALL]${CLEAR}"
+MAIN_PREFIX="${RED}[INSTALL]${CLEAR}"
 
-echo -e "${PREFIX} Starting installation"
+echo -e "${MAIN_PREFIX} Starting installation"
 
-echo -e "${PREFIX} Installing packages"
+echo -e "${MAIN_PREFIX} Installing packages"
 source scripts/packages.sh
 
-echo -e "${PREFIX} Symlinking dotfiles"
+echo -e "${MAIN_PREFIX} Symlinking dotfiles"
 source scripts/symlinks.sh
 
-echo -e "${PREFIX} Launching additional commands"
+echo -e "${MAIN_PREFIX} Launching additional commands"
 source scripts/config.sh

@@ -13,4 +13,7 @@ keepass \
 redshift \
 dunst \
 compton \
-udisks2
+udisks2 \
+feh \
+python-pywal \
+pulseaudio
