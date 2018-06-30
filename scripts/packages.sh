@@ -17,4 +17,5 @@ udisks2 \
 feh \
 python-pywal \
 pulseaudio \
-rofi
+rofi \
+ttf-google-fonts-git
