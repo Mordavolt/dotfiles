@@ -3,3 +3,5 @@
 	email = Mordavolt@gmail.com
 [init]
 	templatedir = ~/dotfiles/static/git-template
+[core]
+	autocrlf = input
