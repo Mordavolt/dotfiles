@@ -2,7 +2,7 @@
 PREFIX="${GREEN}[STOW]${CLEAR}"
 
 declare -a folders
-folders=(git)
+folders=(git i3)
 
 for folder in "${folders[@]}"
 do
