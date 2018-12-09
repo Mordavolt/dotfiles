@@ -1,8 +1,8 @@
 #!/bin/bash
 PREFIX="${PURPLE}[PACKAGES]${CLEAR}"
 
-echo -e "${PREFIX} Starting pacaur update"
-pacaur -Syu --needed \
+echo -e "${PREFIX} Starting yay update"
+yay -Syu --needed \
 stow \
 xclip \
 imagemagick \
