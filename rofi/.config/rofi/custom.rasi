@@ -1,0 +1,44 @@
+/************************************************
+ * ROFI Color theme
+ * User: leofa
+ * Copyright: 2017 leofa
+ ***********************************************/
+
+* {
+    font: "Overpass Mono 15";
+    background-color: rgba (0, 0, 0, 0);
+    border-color: rgba(204, 102, 102, 1);
+    text-color: rgba(112, 120, 128, 1);
+}
+
+#window {
+    background-color: rgba(29, 31, 33, 0.9);
+    border: 1;
+}
+
+#mainbox {
+    margin: 5px;
+}
+
+#inputbar {
+    border: 0 0 1px;
+    children: [entry];
+}
+
+#entry {
+    margin: 0 0 5px 0;
+}
+
+#scrollbar {
+    handle-color: rgba(112, 120, 128, 1);
+}
+
+#listview {
+    spacing: 0;
+    scrollbar: true;
+    lines: 10;
+}
+
+#element.selected {
+    text-color: rgba(204, 102, 102, 1);
+}

@@ -6,7 +6,7 @@ yay -Syu --needed \
 stow \
 xclip \
 imagemagick \
-rambox \
+rambox-bin \
 termite \
 chromium \
 keepass \
