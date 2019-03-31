@@ -2,7 +2,7 @@
 
 
 ## Instructions
-Clone and type 
+Clone to homedir and type 
 ```bash
 ./install.sh
 ```
