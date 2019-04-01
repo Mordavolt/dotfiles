@@ -20,4 +20,5 @@ pulseaudio \
 rofi \
 ttf-google-fonts-git \
 zsh \
-oh-my-zsh-git
+oh-my-zsh-git \
+polybar
