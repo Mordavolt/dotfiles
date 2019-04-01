@@ -23,4 +23,5 @@ zsh \
 oh-my-zsh-git \
 polybar \
 ttf-font-awesome-4 \
-htop
+htop \
+playerctl
