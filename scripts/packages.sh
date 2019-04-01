@@ -21,4 +21,5 @@ rofi \
 ttf-google-fonts-git \
 zsh \
 oh-my-zsh-git \
-polybar
+polybar \ 
+ttf-font-awesome-4

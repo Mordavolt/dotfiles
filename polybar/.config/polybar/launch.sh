@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 IN="eDP1"
+IN2="eDP-1-1"
 EXT="DP1-2"
 
 # Terminate already running bar instances
@@ -16,6 +17,7 @@ if (xrandr | grep "$EXT"); then
 	polybar rightbar &
 else
 	MONITORT=$IN polybar topbar &
+	MONITORT=$IN2 polybar topbar &
 fi
 
 echo "Bars launched..."
