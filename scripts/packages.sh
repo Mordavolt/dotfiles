@@ -24,4 +24,6 @@ oh-my-zsh-git \
 polybar \
 ttf-font-awesome-4 \
 htop \
-playerctl
+playerctl \
+scrot \
+i3lock
