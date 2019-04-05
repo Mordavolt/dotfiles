@@ -260,7 +260,7 @@ exec --no-startup-id compton --config ~/.config/compton.conf -bc  &
 exec --no-startup-id dunst &
 
 # keyboard layout
-exec_always --no-startup-id "setxkbmap -layout us,ru -option grp:alt_shift_toggle"
+exec_always --no-startup-id "setxkbmap -layout us,ru -option grp:shifts_toggle"
 
 # redshift
 exec --no-startup-id redshift

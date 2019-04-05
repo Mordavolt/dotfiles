@@ -5,3 +5,4 @@
 	templatedir = ~/dotfiles/static/git-template
 [core]
 	autocrlf = input
+	editor = vim

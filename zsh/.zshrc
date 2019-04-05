@@ -88,6 +88,8 @@ cat /home/mordavolt/.cache/wal/sequences
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:/usr/bin/core_perl:$PATH"
 
+MAVEN_OPTS="-Xms1024m -Xmx4096m" 
+
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
