@@ -158,7 +158,7 @@ assign [class="Chromium"] $workspace2
 assign [class="KeePass2"] $workspace4
 assign [class="Rambox"] $workspace5
 assign [class="Steam"] $workspace7
-assign [class="jetbrains-idea"] $workspace8
+#assign [class="jetbrains-idea"] $workspace8
 assign [class="Spotify"] $workspace10
 
 # reload the configuration file

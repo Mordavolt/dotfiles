@@ -51,7 +51,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux bower colored-man-pages colorize common-aliases docker emoji gem git gradle grunt mvn ng npm pip sbt scala spring systemd vagrant)
+plugins=(archlinux bower colored-man-pages colorize common-aliases docker emoji fzf gem git gradle grunt mvn ng npm pip sbt scala spring systemd vagrant)
 
 
 # User configuration
@@ -85,6 +85,8 @@ plugins=(archlinux bower colored-man-pages colorize common-aliases docker emoji 
 alias 2clip='xclip -selection c'
 #hash -d jb=~/work/jboss-eap-7.0/bin
 cat /home/mordavolt/.cache/wal/sequences
+eval $(thefuck --alias)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:/usr/bin/core_perl:$PATH"
 

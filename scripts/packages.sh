@@ -26,4 +26,8 @@ ttf-font-awesome-4 \
 htop \
 playerctl \
 scrot \
-i3lock
+i3lock \
+tldr \
+thefuck \ 
+fzf \
+zsh-autosuggestions
