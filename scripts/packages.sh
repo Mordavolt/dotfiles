@@ -27,6 +27,6 @@ playerctl \
 scrot \
 i3lock \
 tldr \
-thefuck \ 
+thefuck \
 fzf \
 zsh-autosuggestions
