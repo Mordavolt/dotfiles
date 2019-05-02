@@ -9,7 +9,6 @@ imagemagick \
 rambox-bin \
 termite \
 chromium \
-keepass \
 redshift \
 dunst \
 compton \

@@ -155,7 +155,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # assigning workspaces
 assign [class="Termite"] $workspace1
 assign [class="Chromium"] $workspace2
-assign [class="KeePass2"] $workspace4
+#assign [class="KeePass2"] $workspace4
 assign [class="Rambox"] $workspace5
 assign [class="Steam"] $workspace7
 #assign [class="jetbrains-idea"] $workspace8
@@ -272,5 +272,4 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id chromium
 exec --no-startup-id termite
 exec --no-startup-id termite
-exec --no-startup-id keepass
 exec --no-startup-id rambox

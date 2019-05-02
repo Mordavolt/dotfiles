@@ -138,7 +138,7 @@ label = %date% %time%
 
 [module/wlan]
 type = internal/network
-interface = wlp58s0
+interface = wlp59s0
 interval = 5
 
 format-connected = <ramp-signal> <label-connected>
