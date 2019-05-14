@@ -83,7 +83,12 @@ plugins=(archlinux bower colored-man-pages colorize common-aliases docker emoji 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias 2clip='xclip -selection c'
-#hash -d jb=~/work/jboss-eap-7.0/bin
+alias mvn-skip='mvn -T1C clean install -DskipTests -Dverification.skip -Dfrontend.skip'
+alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests -Dmongodb.local=true -Drabbitmq.local=true'
+
+hash -d wms=~/work/picnic-wms
+hash -d pom=~/work/picnic-pom
+
 cat /home/mordavolt/.cache/wal/sequences
 eval $(thefuck --alias)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
