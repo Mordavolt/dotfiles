@@ -51,7 +51,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux bower colored-man-pages colorize common-aliases docker emoji fzf gem git gradle grunt mvn ng npm pip sbt scala spring systemd vagrant)
+plugins=(archlinux bower colored-man-pages colorize common-aliases docker docker-compose emoji fzf gem git gradle grunt kubectl mvn ng npm pip sbt scala spring systemd vagrant)
 
 
 # User configuration
@@ -87,6 +87,7 @@ alias mvn-skip='mvn -T1C clean install -DskipTests -Dverification.skip -Dfronten
 alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests -Dmongodb.local=true -Drabbitmq.local=true'
 
 hash -d wms=~/work/picnic-wms
+hash -d wmsf=~/work/picnic-wms-frontend
 hash -d pom=~/work/picnic-pom
 
 cat /home/mordavolt/.cache/wal/sequences
