@@ -1,14 +1,22 @@
 #!/bin/bash
 
-# toggles the external monitor on/off in specified direction
-IN="eDP1"
-EXT="DP1-2"
-EXT2="DP-1-1"
+source "$HOME/.config/i3/screen_vars.sh"
 
-if (xrandr | grep "$EXT"); then
-    xrandr --output DP2-1 --mode 1920x1080 --pos 2160x448 --rotate normal --output DP2-2 --off --output DP2-3 --off --output eDP1 --off --output DP2 --off --output DP1 --off --output DP1-3 --mode 1920x1080 --pos 1080x0 --rotate left --output DP1-2 --mode 1920x1080 --pos 0x0 --rotate left --output DP1-1 --off
-elif (xrandr | grep "$EXT2"); then
-    xrandr --output eDP-1-1 --mode 1368x768 --pos 0x1048 --rotate normal --output DP-1-1 --mode 1920x1080 --pos 2448x420 --rotate normal --output DP-1-2 --off --output DP-1-3 --mode 1920x1080 --pos 1368x0 --rotate left
+# we only work it 2 modes, only INTERNAL or
+#  ________  ________
+# |        ||        | ___________
+# |        ||        ||           |
+# | LEFT_V ||MIDDLE_V||  RIGHT_H  |
+# |        ||        ||___________|
+# |________||________|
+if $HAS_EXTERNAL; then
+  xrandr --output "$INTERNAL" --off \
+    --output "$LEFT_V" --mode 1920x1080 --pos 2280x420 --rotate normal \
+    --output "$MIDDLE_V" --mode 1920x1200 --pos 0x0 --rotate left \
+    --output "$RIGHT_H" --mode 1920x1080 --pos 1200x0 --rotate left
 else
-    xrandr --output VIRTUAL1 --off --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --off --output DP2-1 --off --output DP2-2 --off --output DP2-3 --off --output DP1-3 --off --output DP1-2 --off --output DP1-1 --off --output DP2 --off
+  xrandr --output "$INTERNAL" --mode 1920x1080 --pos 0x0 --rotate normal \
+    --output "$LEFT_V" --off \
+    --output "$MIDDLE_V" --off \
+    --output "$RIGHT_H" --off
 fi
