@@ -218,7 +218,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Apply the last colorscheme generated without changing the background by using -n 
-exec_always --no-startup-id wal -R -n -t
+exec_always --no-startup-id (cat ~/.cache/wal/sequences &)
 
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command

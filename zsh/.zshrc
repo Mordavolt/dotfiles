@@ -84,7 +84,7 @@ plugins=(archlinux bower colored-man-pages colorize common-aliases docker docker
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias 2clip='xclip -selection c'
 alias mvn-skip='mvn -T1C clean install -DskipTests -Dverification.skip -Dfrontend.skip'
-alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests -Dmongodb.local=true -Drabbitmq.local=true'
+alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests -Drabbitmq.local=true'
 
 hash -d wms=~/work/picnic-wms
 hash -d wmsf=~/work/picnic-wms-frontend
