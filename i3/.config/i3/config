@@ -217,7 +217,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Apply the last colorscheme generated without changing the background by using -n 
+# Apply the last colorscheme generated without changing the background by using -n
 exec_always --no-startup-id (cat ~/.cache/wal/sequences &)
 
 # Apply a background different than the one used by wal
@@ -252,6 +252,9 @@ bindsym --release Print exec "scregcp /tmp/"
 
 # automount usb
 exec --no-startup-id udiskie -ans &
+
+# enable network manager applet
+exec --no-startup-id nm-applet &
 
 # window fadein/out
 exec --no-startup-id compton --config ~/.config/compton.conf -bc  &

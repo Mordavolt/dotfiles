@@ -83,11 +83,13 @@ plugins=(archlinux bower colored-man-pages colorize common-aliases docker docker
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias 2clip='xclip -selection c'
-alias mvn-skip='mvn -T1C clean install -DskipTests -Dverification.skip -Dfrontend.skip'
-alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests -Drabbitmq.local=true'
+alias mvn-skip='mvn -T1C clean install -DskipTests -Dverification.skip'
+alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests'
+alias dc=docker-compose
 
 hash -d wms=~/work/picnic-wms
 hash -d wmsf=~/work/picnic-wms-frontend
+hash -d srs=~/work/picnic-shortage-resolution-service
 hash -d pom=~/work/picnic-pom
 
 cat /home/mordavolt/.cache/wal/sequences
@@ -96,11 +98,13 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:/usr/bin/core_perl:$PATH"
 
-MAVEN_OPTS="-Xms1024m -Xmx4096m" 
+MAVEN_OPTS="-Xms1024m -Xmx4096m"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+DISABLE_MAGIC_FUNCTIONS=true
+source nexus_credentials.sh
 source $ZSH/oh-my-zsh.sh
