@@ -21,7 +21,8 @@ grey = #0B0E11
 pink = #B5138D
 blue = #255CBF
 purple = #7A18B5
-green = #16A88B
+ltblue= #16A88B
+green = #27B817
 red = #B50F3C
 orange= #B5781A
 yellow = #B5AA00
@@ -52,7 +53,7 @@ font-1 = PT-Sans:pixelsize=9;0
 
 modules-left = i3
 modules-center = music 
-modules-right = bitcoin volume battery wlan memory cpu xkeyboard date 
+modules-right = bitcoin ada volume battery wlan memory cpu xkeyboard date 
 tray-position = right
 
 [bar/rightbar]
@@ -150,12 +151,12 @@ format-disconnected = <label-disconnected>
 label-disconnected =  no-wifi
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 ; mapping = true
 
 format-volume = <ramp-volume> <label-volume>
-ramp-volume-foreground = ${colors.blue}
+ramp-volume-foreground = ${colors.ltblue}
 ramp-volume-0 = 
 label-volume = %percentage%%
 
@@ -198,6 +199,17 @@ tail = true
 format-prefix = " "
 format-prefix-foreground = ${colors.purple}
 exec = ~/.config/polybar/btc.sh
+
+[module/ada]
+type = custom/script
+interval = 60
+format = <label>
+label-maxlen = 9
+label-ellipsis = false
+tail = true
+format-prefix = "₳ "
+format-prefix-foreground = ${colors.blue}
+exec = ~/.config/polybar/ada.sh
 
 [settings]
 screenchange-reload = true
