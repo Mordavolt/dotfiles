@@ -7,7 +7,7 @@ stow \
 xclip \
 imagemagick \
 rambox-bin \
-termite \
+alacritty \
 chromium \
 redshift \
 dunst \

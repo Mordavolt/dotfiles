@@ -1,0 +1,13 @@
+font:
+  normal:
+    family: Cousine
+    style: Regular
+  bold:
+    family: Cousine
+    style: Bold
+  italic:
+    family: Cousine
+    style: Italic
+  size: 10
+
+background_opacity: 0.8
