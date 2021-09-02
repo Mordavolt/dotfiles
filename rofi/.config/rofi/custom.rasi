@@ -11,6 +11,11 @@
     text-color: rgba(112, 120, 128, 1);
 }
 
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
 #window {
     background-color: rgba(29, 31, 33, 0.9);
     border: 1;
