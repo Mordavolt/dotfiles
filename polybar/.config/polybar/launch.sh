@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 source "$HOME/.config/i3/screen_vars.sh"
 
@@ -8,10 +8,14 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
-if $HAS_EXTERNAL; then
-  MONITORL=$LEFT_V polybar leftbar &
-  MONITORR=$MIDDLE_V polybar rightbar &
-  MONITORT=$RIGHT_H polybar topbar &
+if [ "$SCREEN_SETUP" = "WORK" ]; then
+  MONITORL="DP-1-1" polybar leftbar &
+  MONITORR="DP-1-2" polybar rightbar &
+  MONITORT="DP-1-3" polybar topbar &
+elif [ "$SCREEN_SETUP" = "HOME" ]; then
+  MONITORL="DP-1-1-2" polybar leftbar &
+  MONITORR="DP-1-2-1"  polybar rightbar &
+  MONITORT="DP-1-2-2" polybar topbar &
 else
   MONITORT=$INTERNAL polybar topbar &
 fi

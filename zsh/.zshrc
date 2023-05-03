@@ -82,21 +82,25 @@ plugins=(archlinux bower colored-man-pages colorize common-aliases docker docker
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 alias 2clip='xclip -selection c'
-alias mvn-skip='mvn -T1C clean install -DskipTests -Dverification.skip'
-alias mvn-int='mvn -T 1.0C clean install -Pintegration-tests'
-alias dc=docker-compose
+alias mvn-skip='mvnd clean install -DskipTests -Dverification.skip'
+alias mvn-ver='mvnd clean install -DskipTests'
+alias mvn-int='mvnd clean install'
+alias dc='docker compose'
+alias secrets='docker run --rm -it --volume "${PWD}:/home/picnic/repository" --user "$(id -u):$(id -g)" teampicnic/picnic-secrets-scanner:2.4.0'
 
 hash -d wms=~/work/picnic-wms
 hash -d wmsf=~/work/picnic-wms-frontend
 hash -d srs=~/work/picnic-shortage-resolution-service
-hash -d pom=~/work/picnic-pom
+hash -d inv=~/work/picnic-ws-inventory
 
 cat /home/mordavolt/.cache/wal/sequences
 eval $(thefuck --alias)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-PATH="$(ruby -e 'print Gem.user_dir')/bin:/usr/bin/core_perl:$PATH"
+PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+
 
 MAVEN_OPTS="-Xms1024m -Xmx4096m"
 
@@ -108,3 +112,6 @@ fi
 DISABLE_MAGIC_FUNCTIONS=true
 source nexus_credentials.sh
 source $ZSH/oh-my-zsh.sh
+
+unalias mvnd
+
