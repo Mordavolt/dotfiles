@@ -6,12 +6,12 @@ yay -Syu --needed \
 stow \
 xclip \
 imagemagick \
-rambox-bin \
+rambox-pro-bin \
 alacritty \
 chromium \
 redshift \
 dunst \
-compton \
+picom \
 udisks2 \
 feh \
 python-pywal \
@@ -29,4 +29,15 @@ i3lock \
 tldr \
 thefuck \
 fzf \
-zsh-autosuggestions
+zsh-autosuggestions \
+gedit \
+neofetch \
+openssh \
+net-tools \
+inetutils \
+arandr \
+glxinfo \
+battop \ 
+intellij-idea-ultimate-edition \
+python \
+python-requests
