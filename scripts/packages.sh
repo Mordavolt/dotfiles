@@ -39,5 +39,26 @@ arandr \
 glxinfo \
 battop \ 
 intellij-idea-ultimate-edition \
+intellij-idea-ultimate-edition-jre \
 python \
-python-requests
+python-requests \
+spotify \
+pavucontrol \
+pulseaudio-alsa \ 
+pulseaudio-bluetooth \ 
+reflector \
+alsa-firmware \
+sof-firmware \
+alsa-ucm-conf \
+jdk8-openjdk \
+jdk11-openjdk \
+jdk17-openjdk \
+jdk-openjdk \
+telegram-desktop \
+jdk-jetbrains \
+mvnd \
+nautilus \
+docker \
+docker-compose \
+jq \
+ripgrep
