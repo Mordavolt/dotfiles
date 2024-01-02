@@ -9,9 +9,9 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 if [ "$SCREEN_SETUP" = "WORK" ]; then
-  MONITORL="DP-1-1" polybar leftbar &
-  MONITORR="DP-1-2" polybar rightbar &
-  MONITORT="DP-1-3" polybar topbar &
+  MONITORL="DP-1-2" polybar leftbar &
+  MONITORR="DP-1-3" polybar rightbar &
+  MONITORT="DP-1-4" polybar topbar &
 elif [ "$SCREEN_SETUP" = "HOME" ]; then
   MONITORL="DP-1-1-2" polybar leftbar &
   MONITORR="DP-1-2-1"  polybar rightbar &

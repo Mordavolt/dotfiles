@@ -2,12 +2,12 @@
 
 export INTERNAL="eDP-1-1"
 
-if (xrandr | grep "^DP-1-1 connected" >/dev/null 2>&1); then
+if (xrandr | grep "^DP-1-2 connected" >/dev/null 2>&1); then
   export SCREEN_SETUP="WORK"
 
-  export LEFT_V="DP-1-1"
-  export MIDDLE_V="DP-1-2"
-  export RIGHT_H="DP-1-3"
+  export LEFT_V="DP-1-2"
+  export MIDDLE_V="DP-1-3"
+  export RIGHT_H="DP-1-4"
 elif  (xrandr | grep "^DP-1-1-2 connected" >/dev/null 2>&1); then
   export SCREEN_SETUP="HOME"
 
