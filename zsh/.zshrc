@@ -94,13 +94,16 @@ hash -d wms=~/work/picnic-wms
 hash -d wmsf=~/work/picnic-wms-frontend
 hash -d srs=~/work/picnic-shortage-resolution-service
 hash -d inv=~/work/picnic-ws-inventory
+hash -d pay=~/work/picnic-payments
+hash -d store=~/work/picnic-store
+hash -d plat=~/work/picnic-platform
+hash -d interview=~/work/interview
 
 cat /home/mordavolt/.cache/wal/sequences
 eval $(thefuck --alias)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-
+PATH="$HOME/.local/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 MAVEN_OPTS="-Xms1024m -Xmx4096m"
 
@@ -113,5 +116,14 @@ DISABLE_MAGIC_FUNCTIONS=true
 source nexus_credentials.sh
 source $ZSH/oh-my-zsh.sh
 
-unalias mvnd
-
+function acheck() {
+  if [ -z "$1" ]
+    then
+      echo "Please provide the path to an assignment Git repo"
+      return 1
+  fi
+  echo "Updating Assignment Checker image"
+  docker pull teampicnic/picnic-java-assignment-checker:heads-master
+  echo "Running Assignment Checker on $1"
+  docker run -it --volume "$1:/home/picnic/java-assignment" -e "NEXUS_USERNAME=$NEXUS_USERNAME" -e "NEXUS_PASSWORD=$NEXUS_PASSWORD" teampicnic/picnic-java-assignment-checker:heads-master
+}
