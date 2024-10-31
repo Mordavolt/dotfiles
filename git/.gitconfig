@@ -3,6 +3,7 @@
 	email = arturs.drozdovs@teampicnic.com
 [init]
 	templatedir = ~/dotfiles/static/git-template
+	defaultBranch = main
 [core]
 	autocrlf = input
 	editor = vim

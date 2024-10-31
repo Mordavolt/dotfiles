@@ -89,6 +89,7 @@ alias mvn-ver='mvnd clean install -DskipTests'
 alias mvn-int='mvnd clean install'
 alias dc='docker compose'
 alias secrets='docker run --rm -it --volume "${PWD}:/home/picnic/repository" --user "$(id -u):$(id -g)" teampicnic/picnic-secrets-scanner:2.4.0'
+alias check='picnic-shared-tools/patch.sh && picnic-shared-tools/format.sh && mvnd clean install -DskipTests'
 
 hash -d wms=~/work/picnic-wms
 hash -d wmsf=~/work/picnic-wms-frontend
