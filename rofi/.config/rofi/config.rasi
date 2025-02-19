@@ -1,4 +1,0 @@
-configuration {
-	ignored-prefixes: "shutdown now";
-}
-@theme "custom"
