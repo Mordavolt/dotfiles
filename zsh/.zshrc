@@ -83,24 +83,15 @@ plugins=(archlinux bower colored-man-pages colorize common-aliases docker docker
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias 2clip='xclip -selection c'
+alias 2clip='wl-copy'
 alias mvn-skip='mvnd clean install -DskipTests -Dverification.skip'
 alias mvn-ver='mvnd clean install -DskipTests'
 alias mvn-int='mvnd clean install'
 alias dc='docker compose'
-alias secrets='docker run --rm -it --volume "${PWD}:/home/picnic/repository" --user "$(id -u):$(id -g)" teampicnic/picnic-secrets-scanner:2.4.0'
-alias check='picnic-shared-tools/patch.sh && picnic-shared-tools/format.sh && mvnd clean install -DskipTests'
 
-hash -d wms=~/work/picnic-wms
-hash -d wmsf=~/work/picnic-wms-frontend
-hash -d srs=~/work/picnic-shortage-resolution-service
-hash -d inv=~/work/picnic-ws-inventory
-hash -d pay=~/work/picnic-payments
-hash -d store=~/work/picnic-store
-hash -d plat=~/work/picnic-platform
-hash -d interview=~/work/interview
+hash -d pers=~/work/personal
 
-cat /home/mordavolt/.cache/wal/sequences
+#cat /home/mordavolt/.cache/wal/sequences
 eval $(thefuck --alias)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -114,17 +105,5 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 DISABLE_MAGIC_FUNCTIONS=true
-source nexus_credentials.sh
+#source nexus_credentials.sh
 source $ZSH/oh-my-zsh.sh
-
-function acheck() {
-  if [ -z "$1" ]
-    then
-      echo "Please provide the path to an assignment Git repo"
-      return 1
-  fi
-  echo "Updating Assignment Checker image"
-  docker pull teampicnic/picnic-java-assignment-checker:heads-master
-  echo "Running Assignment Checker on $1"
-  docker run -it --volume "$1:/home/picnic/java-assignment" -e "NEXUS_USERNAME=$NEXUS_USERNAME" -e "NEXUS_PASSWORD=$NEXUS_PASSWORD" teampicnic/picnic-java-assignment-checker:heads-master
-}
