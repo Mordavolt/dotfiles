@@ -57,4 +57,6 @@ ripgrep \
 networkmanager \
 nm-connection-editor \
 network-manager-applet \
-blueman
+blueman \
+swayidle \
+noto-fonts-emoji
