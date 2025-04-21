@@ -11,6 +11,8 @@
 
 set $mod Mod4
 
+include /etc/sway/config.d/*
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:PT Sans Regular 8
@@ -33,6 +35,8 @@ floating_modifier $mod
 output DP-1 transform 270
 output DP-2 mode 3440x1440@165Hz
 output DP-3 transform 270
+# for Xweyland
+exec xrandr --output DP-2 --primary
 
 # gaps
 gaps inner 10
@@ -244,7 +248,7 @@ client.background       #ffffff
 bindsym $mod+l exec $HOME/.config/sway/lock/lock.sh
 
 # take a screenshot of a screen region and copy it to a clipboard
-bindsym --release Shift+Print exec "scregcp -s /tmp/"
+bindsym --release Shift+Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
 # take a screenshot of a whole window and copy it to a clipboard
 bindsym --release Print exec "scregcp /tmp/"
@@ -260,7 +264,7 @@ exec dunst &
 
 # keyboard layout
 input type:keyboard {
-    xkb_layout us,ru
+    xkb_layout us,ru,lv
     xkb_options grp:shifts_toggle
 }
 
@@ -269,6 +273,14 @@ exec waybar
 
 # bluetooth
 exec blueman-applet
+
+# steam
+exec steam
+
+# telegram
+exec telegram-desktop
+
+exec swayidle -w timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 # default apps
 exec chromium
