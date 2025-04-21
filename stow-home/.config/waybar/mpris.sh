@@ -11,9 +11,9 @@ fi
 
 # Foreground color formatting tags are optional
 if [[ $player_status = "Playing" ]]; then
-    echo "%{F#10A800}$icon%{F-} $metadata"       # Orange when playing
+    echo "{\"text\": \"$icon $metadata\", \"class\": \"playing\"}"
 elif [[ $player_status = "Paused" ]]; then
-    echo "%{F#65737E}$icon%{F-} $metadata"       # Greyed out info when paused
+    echo "{\"text\": \"$icon $metadata\", \"class\": \"paused\"}"
 else
-    echo ""                
+    echo "{\"text\": \"\"}"
 fi
