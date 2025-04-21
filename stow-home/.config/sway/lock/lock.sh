@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-icon="$HOME/walpapers/lock.png"
+icon="$HOME/wallpapers/lock.png"
 tmpbg1='/tmp/screen1.png'
 tmpbg2='/tmp/screen2.png'
 tmpbg3='/tmp/screen3.png'
