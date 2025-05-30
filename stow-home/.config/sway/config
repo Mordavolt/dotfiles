@@ -226,15 +226,13 @@ exec_always feh --bg-fill ~/wallpapers/bg1.png
 
 default_border pixel 2
 
-hide_edge_borders vertical
-
 # Color variables
 set $unfocused_border #1D1F21
 set $focused_border #CC6666
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   $focused_border
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   $unfocused_border
 client.unfocused        #ffffff #ffffff #ffffff #ffffff   $unfocused_border
 client.urgent           #ffffff #ffffff #ffffff #ffffff   $focused_border
 client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
