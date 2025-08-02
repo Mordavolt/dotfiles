@@ -270,7 +270,7 @@ exec blueman-applet
 exec steam
 
 # telegram
-exec telegram-desktop
+exec Telegram
 
 # Obsidian
 exec obsidian

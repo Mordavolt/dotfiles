@@ -10,8 +10,6 @@
         "custom/media"
     ],
     "modules-right": [
-        "custom/ada",
-        "custom/btc",
         "idle_inhibitor",
         "pulseaudio",
         "power-profiles-daemon",
